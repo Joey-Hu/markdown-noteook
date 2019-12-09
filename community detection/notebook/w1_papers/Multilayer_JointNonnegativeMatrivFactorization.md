@@ -1,13 +1,14 @@
-## 论文笔记
+## 论文笔记-Community Detection in Multi-Layer Networks Using Joint Nonnegative Matrix Factorization
 
 **题目**
-Community Detection inMulti-Layer Networks Using Joint Nonnegative Matrix Factorization
+Community Detection in Multi-Layer Networks Using Joint Nonnegative Matrix Factorization
 
 **关键字**
 Multi-layer networks;  Community Structure; nonnegative matrix factorization(加权非负矩阵分解); semi-supervised clustering
 
 **理论方法**
 实现单层网络的社团检测算法已经很多了，很自然的就对单层网络的算法进行扩展，目前扩展有两种策略：
+
 1. 将多层网络分解成单层网络，再用单层网络的算法检测社团。
 2. 采用单层网络算法检测获取每一层的社团，然后利用共识聚类将各层社团进行连接
 
@@ -48,18 +49,27 @@ $$
 这样把一个多目标优化问题转化为一个单目标优化问题。
 
 S2-jNMF
-!["S2-jNMF"]()
+
+!["S2-jNMF"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/community%20detection/images/%E5%A4%8D%E6%9D%82%E7%BD%91%E7%BB%9C/w1_papers/s2-jNMF.jpg)
+
 s2-jNMF算法主要有三个部分组成，先验信息构建，矩阵分解和社团检测。
-!["S2-jNMF-algo"]()
+
+!["S2-jNMF-algo"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/community%20detection/images/%E5%A4%8D%E6%9D%82%E7%BD%91%E7%BB%9C/w1_papers/s2-jNMF-algo.jpg)
 
 1. 先验信息构建
     在聚类算法中适当地加入先验信息，不仅提高了算法的精度，而且提高了算法的速度。先验信息的构造分为两步，即获得高质量的顶点群和构造局部信息。第一步先通过greedy search方法获取稠密子图，为避免随机选择种子节点，对多层网络的节点进行排序，来选择无标签，high-ranking的节点。第二步是构建先验信息举证$\widehat{W}^{[l]}$
 
 2. 矩阵分解
     通过扩展NMF算法将$\widehat{W}^{[l]}$分解为两个矩阵之积：basis matrix B和多个coefficient matrices $F^{[l]}$
+    什么是NMF算法[1]？
+>NMF算法能够寻找到一个非负矩阵U和一个非负矩阵V，将一个非负的矩阵分解为左右两个非负矩阵的乘积，将矩阵的维数进行降低，对大量的数据进行压缩。NMF属于一个无监督学习的算法，其中限制条件就是W和H中的所有元素都要大于0。
+>
+
+!["nmf-algo"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/community%20detection/images/%E5%A4%8D%E6%9D%82%E7%BD%91%E7%BB%9C/w1_papers/NMF-algo.jpg)
+
 
 3. 社团检测
-通过basis matrix B获得社团
+     通过basis matrix B获得社团
 
 参数确定
 该算法有三个参数，$k$表示社团数量，$\beta$表示先验信息的密度阈值，$\gamma$用来控制先验信息的重要性
@@ -70,13 +80,18 @@ s2-jNMF算法主要有三个部分组成，先验信息构建，矩阵分解和�
 数据集包括5个网络数据集，其中两个人工网络，三个现实网络。
 >The artificial networks are used for measuring the accuracy of various algorithms, while the real-world networks are used to test whether these algorithms can dis- cover communities in multi-layer networks with specific backgrounds.
 
-
+算法性能度量：各层模块的平均密度和ass值
 
 **实验验证及分析**
 
-**讨论与展望**
 
+
+**讨论与展望**
+1. 本文只针对多层网络的社团检测，如何精确的量化其他多层网络(时态(temporal)网络、多重(multiplex)网络和互连(interconnected)网络)中的社团是下一步工作。
+2. 如何优化S2-jNMF算法，可以通过网络约简来处理大规模网络。
 
 **心得体会**
 
 
+参考：
+[1] https://blog.csdn.net/sinat_26811377/article/details/97914029
