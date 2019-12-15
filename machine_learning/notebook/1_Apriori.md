@@ -38,7 +38,7 @@ Apriori定律2：如果一个集合不是频繁项集，则它的所有超集都
 4. 利用得到的频繁项集进行置信度规则分析，得到强关联关系的项集关系
 
 **举例**
-!["举例"]()
+!["举例"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/apriori_algo/example.jpg)
 
 ### FP-growth算法
 
@@ -54,9 +54,8 @@ FP-growth算法的基本思路如下：
 
 FP树的挖掘
 
-
 **举例**
-!["fap_growth"]()
+!["fap_growth"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/apriori_algo/fp-growth_example.jpg)
 
 
 
