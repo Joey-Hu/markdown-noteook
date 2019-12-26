@@ -54,13 +54,18 @@ FP-growth算法的基本思路如下：
 
 FP树的挖掘
 
-**举例**
+**【转】举例**
 !["fap_growth"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/apriori_algo/fp-growth_example.jpg)
+
+
+
+
 
 
 
 参考：
 https://blog.csdn.net/qq_36187544/article/details/89184879
 https://blog.csdn.net/my_learning_road/article/details/79726555
+https://www.cnblogs.com/pinard/p/6307064.html
 
 

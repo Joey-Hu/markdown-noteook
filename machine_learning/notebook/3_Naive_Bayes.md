@@ -33,7 +33,7 @@ $$
 为避免零概率值，可以使用拉普拉斯校准(假设训练数据库很大，对每个计数加一造成的估计概率的变化可以忽略不计)。
 
 #### 举例
-!["example"]()
-!["example_2"]()
+!["example"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/naive_bayes/naive_bayes_example.png)
+!["example_2"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/naive_bayes/naive_bayes_example_2.png)
 
 

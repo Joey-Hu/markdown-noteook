@@ -3,7 +3,7 @@
 用决策树对需要测试的实例进行分类：从根节点开始，对实例的某一特征进行测试，根据测试结果，将实例分配到其子结点；这时，每一个子结点对应着该特征的一个取值。如此递归地对实例进行测试并分配，直至达到叶结点。最后将实例分配到叶结点的类中。
 
 #### 决策树基本算法
-!["决策树基本算法"]()
+!["决策树基本算法"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/decision_tree/generate_decision_tree.png)
 
 #### 相关概念
 
