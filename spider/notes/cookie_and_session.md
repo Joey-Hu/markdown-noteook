@@ -12,7 +12,7 @@ cookie是记录在浏览器中的，会存在以下问题：
 ### session
 session是在服务器端进行数据的记录，并且给每一个用户一个sessionID，并且把这个sessionID记录在浏览器端，也就是设置为cookie。
 
-!["cookie.png"]()
+!["cookie.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/spider/images/cookie_and_session/cookie.png)
 
 
 
