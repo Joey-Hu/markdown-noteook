@@ -2,9 +2,10 @@
 
 #### 1. Data Understanding
 
-!["Attributes_calsses.png"]()
+!["Attributes_calsses.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_机器学习笔记/Attributes_calsses.png)
 
 **属性类型**
+
 1. 标称属性（nominal attribute）：性别（male, female）、头发颜色（red, yellow, black ...）、职业（docter, engineer, ...）
 2. 二元属性（binary attribute）：标称属性的一种，只有两个状态，0 or 1，true or false
 	对称的二元属性：两种状态具有同等价值，并且携带相同权重，如性别（male, female）
@@ -25,9 +26,9 @@ table, record, and attribute selection as well as transformation and cleaning of
 modeling tools..
 
 **数据清理**
-!["preprocess_data.png"]()
+!["preprocess_data.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/preprocess_data.png)
 
-!["data_cleaning.png"]()
+!["data_cleaning.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/data_cleaning.png)
 
 1. 缺失值（missing value）：忽略元组、手动填值、全局填充（全填unknown或无穷）、用中心值填充（mean、median等）、用同一类中的mean或median填充、用概率最大的值填充（最流行的方法)、回归替换
 2. 噪声（noise）
@@ -60,7 +61,7 @@ Scale the data by moving the decimal point of the attribute value.
 
 **Feature Engineering**
 
-!["feature_engineering.png"]()
+!["feature_engineering.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/feature_engineering.png)
 
 > **Feature Engineering is a sort of art**
 > Feature engineers requires a creative combination of domain expertise and insights obtained from the data exploration step.
@@ -73,13 +74,13 @@ This process(Feature Engineering) attempts to **create additional relevant featu
 
 Although many of the raw data fields can be directly included in the selected feature set used to train a model, it is often the case that additional (engineered) features need to be constructed from the features in the raw data to generate an enhanced training dataset.
 
-!["feature_engineering_example.png"]()
+!["feature_engineering_example.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/feature_engineering_example.png)
 
 **Feature Selection**
 原始数据中一些特征是冗余的（redundant）或是不相关的（irrelevant）。Feature Selection 的任务就是从原始数据集中选择特征的子集，通过使用最小的特征集来表示数据中的最大方差来减少数据的维数。
 
 Curse of dimensionality
-!["curse_of_dimensionality.png"]()
+!["curse_of_dimensionality.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/curse_of_dimensionality.png)
 
 Approaches for Feature Selecion
 
@@ -104,7 +105,7 @@ Wrapper methods consider the selection of a set of features as a search problem,
 3. Embedded method
 最常见的是正则化方法
 
-!["feature_selection_approaches_summarize.png"]()
+!["feature_selection_approaches_summarize.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/feature_selection_approaches_summarize.png)
 
 **Feature Selection vs Dimension Reduction**
 
@@ -119,12 +120,12 @@ Machine learning uses a model to capture the relationship between feature vector
 
 > “All models are wrong, but some are useful.” - George Box
 
-!["the_process_of_ML.png"]()
+!["the_process_of_ML.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/the_process_of_ML.png)
 
-!["how_to_develop_a_model.png"]()
+!["how_to_develop_a_model.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/how_to_develop_a_model.png)
 
 #### 4. Some of Machine Learning Algorithms
-!["some_of_ML_algo.png"]()
+!["some_of_ML_algo.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/some_of_ML_algo.png)
 
 #### 5. Evaluate the model
 * Accurate
@@ -133,7 +134,7 @@ Machine learning uses a model to capture the relationship between feature vector
 * Scalable
 
 **About the model fitting**
-!["model_fitting.png"]()
+!["model_fitting.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/model_fitting.png)
 
 **Model validtion strategy**
 * 留出法（hold-out validation）（70~80% for train, 20~30% for test）
@@ -145,7 +146,7 @@ Machine learning uses a model to capture the relationship between feature vector
 2. Precision
 3. Recall
 
-!["accuracy_precision_recall.png"]()
+!["accuracy_precision_recall.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/accuracy_precision_recall.png)
 
 4. F Score
 5. ROC
