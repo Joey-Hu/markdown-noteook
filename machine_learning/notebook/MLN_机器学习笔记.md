@@ -1,5 +1,7 @@
 ## MLN -- 机器学习笔记
 
+### The fundamental conception
+
 #### 1. Data Understanding
 
 !["Attributes_calsses.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_机器学习笔记/Attributes_calsses.png)
@@ -57,6 +59,7 @@ $$
 Scale the data by moving the decimal point of the attribute value.
 
 **离散化数据**
+
 分箱
 
 **Feature Engineering**
@@ -153,6 +156,81 @@ Machine learning uses a model to capture the relationship between feature vector
 6. AUC
 7. Log Loss
 
+**About the cost of prediction error**
+关于预测错误，有以下两种情况：False Positive和False Negative，之余哪一种情况更加糟糕，这要取决于具体情况 :)。对于医疗诊断，显然FN更加糟糕（将有疾病的诊断为没有疾病的）；对于垃圾邮件检测，显然FP更加糟糕（将重要邮件分类为垃圾邮件）
+
+这就涉及到precision和recall之间的关系：
+
+!["precision_recall_curve.png"]()
+
+1. 当precision更加重要时，我们可以提高classifier的阈值，当$h\theta(x)  \geq 0.7$（原始阈值为0.5）时，分类为1；当$h\theta(x)  < 0.7$时，分类为0。
+	这样会导致precision升高，recall降低。
+
+2. 当recall更加重要时，我们可以降低classifier的阈值，当$h\theta(x)  \geq 0.3$（原始阈值为0.5）时，分类为1；当$h\theta(x)  < 0.3$时，分类为0。
+	这样会导致recall升高，precision降低。
+
+因为针对不同的阈值，对应着不同的precision和recall，所以怎么判断这个分类器的好坏呢？此时就要引入**F Score**。
+
+$$
+\begin{equation}
+F_1 = 2 \frac{PR}{P+R} = 2 \frac{Precision \times Recall}{Precision + Recall}. \tag{3}
+\end{equation}
+$$
+
+**ROC Curve**
+!["ROC_Curve.png"]()
+
+ROC曲线绘制的是在不同的classification threshold情况下，True Positive Rate和False Positive Rate的关系。
+$$
+\begin{equation}
+\begin{split}
+TPR = \frac{\# of True Positive}{\# of True Positive + \# of False Negative}
+\\
+
+\\
+FPR = \frac{\# of False Positive}{\# of False Positive + \# of True Negative}
+\end{split}
+\end{equation}
+$$
+
+**AUC Curve**
+
+AUC = area under the Curve(ROC)
+
+!["ROC_AUC.png"]()
+
+**R & $R^2$ & Adjust $R^2$**
+R: Pearson correlation coeifficient，皮尔逊相关系数 https://www.zhihu.com/question/19734616
+
+$R^2$: R2 describes the proportion of the variance/variation in the dependent variable y
+explained by the regression model.
+
+一般来说，$R^2$值越高，说明模型对数据拟合的越好。
+
+**High Bias & High Variance**
+
+!["High_Bias_High_Variance.png"]()
+
+如何应对Underfitting(High Bias):
+1. Train a more complex model /different model
+2. Add more features as input
+3. Use better optimization algorithm such as Adam
+4. Hyperparameters search
+5. Use ensemble learning – Boosting
+
+如何应对Overfitting(High Variance):
+1. Use more data
+2. Use [Regularization](https://blog.csdn.net/liuweiyuxiang/article/details/99984288)
+3. Less complex model
+4. Hyper-parameter search
+5. Use Ensemble - Bagging & Random Forest
+
+#### 6. Deployment Model
+
+### Well-known algorithms
+
+#### 1. KNN
+------------------------------p250
 
 
-------------------p169
+
