@@ -161,7 +161,7 @@ Machine learning uses a model to capture the relationship between feature vector
 
 这就涉及到precision和recall之间的关系：
 
-!["precision_recall_curve.png"]()
+!["precision_recall_curve.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/precision_recall_curve.png)
 
 1. 当precision更加重要时，我们可以提高classifier的阈值，当$h\theta(x)  \geq 0.7$（原始阈值为0.5）时，分类为1；当$h\theta(x)  < 0.7$时，分类为0。
 	这样会导致precision升高，recall降低。
@@ -178,7 +178,7 @@ F_1 = 2 \frac{PR}{P+R} = 2 \frac{Precision \times Recall}{Precision + Recall}. \
 $$
 
 **ROC Curve**
-!["ROC_Curve.png"]()
+!["ROC_Curve.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ROC_Curve.png)
 
 ROC曲线绘制的是在不同的classification threshold情况下，True Positive Rate和False Positive Rate的关系。
 $$
@@ -197,7 +197,7 @@ $$
 
 AUC = area under the Curve(ROC)
 
-!["ROC_AUC.png"]()
+!["ROC_AUC.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ROC_AUC.png)
 
 **R & $R^2$ & Adjust $R^2$**
 R: Pearson correlation coeifficient，皮尔逊相关系数 https://www.zhihu.com/question/19734616
@@ -209,7 +209,7 @@ explained by the regression model.
 
 **High Bias & High Variance**
 
-!["High_Bias_High_Variance.png"]()
+!["High_Bias_High_Variance.png"](https://raw.githubusercontent.com/Joey-Hu/markdown-noteook/master/machine_learning/images/MLN_机器学习笔记/High_Bias_High_Variance.png)
 
 如何应对Underfitting(High Bias):
 1. Train a more complex model /different model
